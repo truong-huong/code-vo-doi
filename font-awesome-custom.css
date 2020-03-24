@@ -17,6 +17,14 @@
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
+/* font awesome */
+.fa-bars:before { content:'\f0c9'; }
+.fa-font:before { content:'\f031'; }
+.fa-facebook-f:before { content:'\f39e'; }
+.fa-instagram:before { content:'\f16d'; }
+.fa-share-alt:before { content:'\f1e0'; }
+.fa-code:before { content:'\f121'; }
+/* font-awesoe */
 @font-face {
 font-family: 'Font Awesome 5 Brands';
 font-style: normal;
