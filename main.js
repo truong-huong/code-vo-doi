@@ -21,7 +21,7 @@ var getId = id => doc.getElementById( id );
 var share = (social) => {
     var a = window.location.href ;
     if (social == 'facebook') {
-        window.open('https://www.facebook.com/dialog/share?app_id=3101&href='+a, '_blank');
+        window.open('https://www.facebook.com/dialog/share?app_id=1148726895462441&href='+a, '_blank');
     }
     if (social == 'twitter') {
         window.open('https://twitter.com/intent/tweet?url='+a, '_blank');
