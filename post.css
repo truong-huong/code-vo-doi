@@ -1,0 +1,244 @@
+#comment-list [background-icon] {
+            border-radius: 5px;
+}
+/* Convert Code */
+input[id=convertCodeForm]:checked ~ .convertCodeForm {
+    display: block;
+}
+#codeForm {
+    resize: none;
+    margin: 0;
+    display:inline-block;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.convertCodeForm {
+    display: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#convertCode:before {
+    content:'\f121';
+}
+label[for=convertCodeForm] {
+    padding: 5px;
+}
+label[for=convertCodeForm] i {
+    margin-right: 10px;
+}
+/* Cảm ơn vì đã đọc */
+#thanks {
+    margin-top: 30px;
+    text-align: center;
+}
+#thanks:before {
+    content: '';
+    position: relative;
+    left: 50%;
+    margin-left: -180px;
+    margin-bottom: 20px;
+    display: block;
+    width: 320px;
+    background: #ccc;
+    height: 2px;
+}
+/* Danh sách nhãn */
+#tag-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#tag-list li  {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    color: #0077aa;
+}
+/* Post Body */
+.postBody img{
+    max-width: 100%;
+    margin:10px auto;
+    border-radius: 15px;    
+}
+.postBody * {
+    max-width: 100%;
+}
+/* Làm đẹp code */
+/* lam dep code */  
+code[class*="language-"], 
+pre[class*="language-"] { 
+    font-family:'Space Mono',monospace; 
+    font-weight: bolder; 
+  color:black;  
+  background:none;  
+  text-shadow:0 1px white;  
+  text-align:left;  
+  white-space:pre;  
+  word-spacing:normal;  
+  word-break:normal;  
+  word-wrap:normal; 
+  -moz-tab-size:4;  
+  -o-tab-size:4;  
+  font-size: 93.75%;
+  tab-size:4; 
+  -webkit-hyphens:none; 
+  -moz-hyphens:none;  
+  -ms-hyphens:none; 
+  hyphens:none;
+
+} 
+pre[class*="language-"]::-moz-selection,  
+pre[class*="language-"]::-moz-selection,  
+code[class*="language-"]::-moz-selection, 
+code[class*="language-"]::-moz-selection {  
+  text-shadow:none; 
+  background:#b3d4fc; 
+} 
+pre[class*="language-"]::selection, 
+pre[class*="language-"]::selection, 
+code[class*="language-"]::selection,  
+code[class*="language-"]::selection { 
+  text-shadow:none; 
+  background:#b3d4fc; 
+} 
+@media print {  
+  code[class*="language-"], 
+  pre[class*="language-"] { 
+    text-shadow:none; 
+  } 
+} 
+/* Code blocks */ 
+pre[class*="language-"] { 
+  padding:1em;  
+  margin:.5em 0;  
+  overflow:auto;  
+} 
+:not(pre) > code[class*="language-"], 
+pre[class*="language-"] { 
+  background:#f5f2f0; 
+} 
+/* Inline code */:not(pre) > code[class*="language-"] { 
+  padding:.1em; 
+  border-radius:.3em; 
+  white-space:normal; 
+} 
+.token.comment, 
+.token.prolog,  
+.token.doctype, 
+.token.cdata {  
+  color:slategray;  
+} 
+.token.punctuation {  
+  color:#999; 
+} 
+.token.namespace {  
+  opacity:.7; 
+} 
+.token.property,  
+.token.tag, 
+.token.boolean, 
+.token.number,  
+.token.constant,  
+.token.symbol,  
+.token.deleted {  
+  color:#905; 
+} 
+.token.selector,  
+.token.attr-name, 
+.token.string,  
+.token.char,  
+.token.builtin, 
+.token.inserted { 
+  color:#690; 
+} 
+.token.operator,  
+.token.entity,  
+.token.url, 
+.language-css .token.string,  
+.style .token.string {  
+  color:#9a6e3a;  
+  background:hsla(0,0%,100%,.5);  
+} 
+.token.atrule,  
+.token.attr-value,  
+.token.keyword {  
+  color:#07a; 
+} 
+.token.function,  
+.token.class-name { 
+  color:#DD4A68;  
+} 
+.token.regex, 
+.token.important, 
+.token.variable { 
+  color:#e90; 
+} 
+.token.important, 
+.token.bold { 
+  font-weight:bold; 
+} 
+.token.italic { 
+  font-style:italic;  
+} 
+.token.entity { 
+  cursor:help;  
+}
+.warning {
+  border-left:solid 1.5px #c0580c;
+}
+.warning:before {
+  content: "\f071";
+  color: #FFCC01;
+}
+.ban {
+  border-left:solid 1.5px  #eb0f00;
+}
+.ban:before {
+  content: "\f05e";
+  color:#CF1F25;
+}
+.like {
+  border-left:solid 1.5px  #3740ff;
+}
+.like:before {
+  content: "\f164";
+  color: #596D9F;
+}
+.wikipedia:before {
+  content: "\f266";
+  color: #000;
+}
+/* Comments */
+#comment-list {
+    margin-top: 20px;
+    border-top: solid #888;
+    border-bottom: solid #888;
+    padding-top: 20px;
+}
+#comment-list .somebody-said {
+    
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.comment-cover {
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 10px;
+}
+.delete {
+    margin: 5px 15px;
+    color: #888;
+    font-size: 87.5%;
+}
+#comment-list .delete:after {
+    content: '\f2ed';
+    font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
+    font-weight: 800;
+}
