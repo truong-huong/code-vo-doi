@@ -44,8 +44,8 @@ var convertLanguage ;
         /* Cho toàn bộ mẹ kiếp thằng firefox là code dài ra */
         var regex = /\[code(.*?)\]/gim;
         el.innerHTML = comment.replace(regex,function(str){
-          return str.replace(/\[/gim,'<').replace(/\]/gim,'>')
-        }).replace(/\[\/code\]/gim,'</code>').replace(/\<br\>/gim,'&#10;')
+          return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
+        }).replace(/\[\/code\]/gim,'</code></pre>').replace(/\<br\>/gim,'&#10;')
     });
 })(); 
 // Chuyên dùng để load code làm đẹp 
