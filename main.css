@@ -20,6 +20,7 @@ body {
     letter-spacing: normal;
     word-spacing: normal;
     background-color: #fff;
+    font-display:swap;
 }
 #post-info a[href]:not([class]) {
     border-bottom: dotted 1.5px;
