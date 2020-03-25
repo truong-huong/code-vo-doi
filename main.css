@@ -83,8 +83,10 @@ header section:first-child {
     align-items: center;
     padding: 2.5px 15px;
 }
-.font-awesome-button:hover {
-    color: #444;
+.font-awesome-button svg {
+    width: 14px;
+    height: 16px;
+    display: block;
 }
 .drop-btn {
     position: relative;
