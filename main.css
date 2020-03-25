@@ -19,6 +19,7 @@ body {
     line-height: 1.6;
     letter-spacing: normal;
     word-spacing: normal;
+    background-color: #fff;
 }
 #post-info a[href]:not([class]) {
     border-bottom: dotted 1.5px;
@@ -142,9 +143,6 @@ header section:first-child {
 }
 #pink {
     background:hsla(0, 100%, 90%, 0.3);
-}
-[theme-color=null] {
-    background-color: #fff;
 }
 [theme-color=pink] , [theme-color=pink] header ,[theme-color=pink] .prev a,[theme-color=pink] #about-me,[theme-color=pink] #tags {
     background-color: hsla(0, 100%, 90%, 0.3);
@@ -360,9 +358,6 @@ img:hover {
 .comment-number:before {
     content:'\f02c';
 }
-
-
- 
 .for {
     margin-top: 20px;
 }
