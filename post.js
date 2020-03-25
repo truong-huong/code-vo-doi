@@ -36,10 +36,16 @@ var convertLanguage ;
 (function(){
     Array.prototype.forEach.call(getId('comments').querySelectorAll('.somebody-said'), (el) => {
         var comment = el.innerHTML ;
+        /* Chrome và một số thằng tiên tiến hơn firefox *//*
         regex = /\[code(.*?)\](.*?)\[\/code\]/gims ;
         el.innerHTML = comment.replace(regex ,function(str){
         return '<pre>'+str.replace(/\[/gims,'<').replace(/\]/gims,'>')+'</pre>';
-            }).replace(/\<br\>/gim,'&#10;')
+            }).replace(/\<br\>/gim,'&#10;')*/
+        /* Cho toàn bộ mẹ kiếp thằng firefox là code dài ra */
+        var regex = /\[code(.*?)\]/gim;
+        el.innerHTML = comment.replace(regex,function(str){
+          return str.replace(/\[/gim,'<').replace(/\]/gim,'>')
+        }).replace(/\[\/code\]/gim,'</code>').replace(/\<br\>/gim,'&#10;')
     });
 })(); 
 // Chuyên dùng để load code làm đẹp 
