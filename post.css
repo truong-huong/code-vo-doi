@@ -243,3 +243,19 @@ pre[class*="language-"] {
     font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
     font-weight: 800;
 }
+/* toc */
+#toc {
+    background: #f1f1f1;
+    padding: 10px;
+}
+#toc ul , #toc li {
+    list-style: none;
+    padding:0;
+    margin: 0;
+    margin-bottom: 7px;
+}
+#toc ul {
+    margin-left: 30px;
+    border-left: solid 1.5px #888;
+    padding-left: 10px;
+}
