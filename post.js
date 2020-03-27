@@ -171,7 +171,7 @@ Array.prototype.forEach.call(samePostArray, (el) => {
                       return str;
                   }
 
-                  if (openLevel > level) {
+                  if (openLevel > level && level > 0) {
                       toc += (new Array(openLevel - level + 1)).join("<ul>");
                   } else if (openLevel < level) {
                       toc += (new Array(level - openLevel + 1)).join("</ul>");
