@@ -151,18 +151,50 @@ Array.prototype.forEach.call(samePostArray, (el) => {
 (function(){
     Array.prototype.forEach.call(getId('comments').querySelectorAll('.somebody-said'), (el) => {
         var comment = el.innerHTML ;
-        /* Chrome và một số thằng tiên tiến hơn firefox *//*
-        regex = /\[code(.*?)\](.*?)\[\/code\]/gims ;
-        el.innerHTML = comment.replace(regex ,function(str){
-        return '<pre>'+str.replace(/\[/gims,'<').replace(/\]/gims,'>')+'</pre>';
-            }).replace(/\<br\>/gim,'&#10;')*/
-        /* Cho toàn bộ mẹ kiếp thằng firefox là code dài ra */
         var regex = /\[code(.*?)\]/gim;
         el.innerHTML = comment.replace(regex,function(str){
           return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
         }).replace(/\[\/code\]/gim,'</code></pre>').replace(/\<br\>/gim,'&#10;')
     });
 })(); 
+// Create table of contents
+(function () {
+  (function () {
+      var toc = "";
+      var level = 0;
+
+      document.getElementById("postBody").innerHTML =
+          document.getElementById("postBody").innerHTML.replace(
+              /<h([\d])>([^<]+)<\/h([\d])>/gi,
+              function (str, openLevel, titleText, closeLevel) {
+                  if (openLevel != closeLevel) {
+                      return str;
+                  }
+
+                  if (openLevel > level) {
+                      toc += (new Array(openLevel - level + 1)).join("<ul>");
+                  } else if (openLevel < level) {
+                      toc += (new Array(level - openLevel + 1)).join("</ul>");
+                  }
+
+                  level = parseInt(openLevel);
+
+                  var anchor = titleText.replace(/ /g, "_");
+                  toc += "<li><a href=\"#" + anchor + "\">" + titleText
+                      + "</a></li>";
+
+                  return "<h" + openLevel + " id=\"" + anchor.trim() + "\">"
+                      + titleText + "</a></h" + closeLevel + ">";
+              }
+          );
+
+      if (level) {
+          toc += (new Array(level + 1)).join("</ul>");
+      }
+
+      document.getElementById("toc").innerHTML += toc;
+  })();
+})();
 }catch(e) {}
 checkCodeLanguage();
    
