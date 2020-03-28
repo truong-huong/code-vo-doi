@@ -35,6 +35,7 @@ var convertLanguage ;
                 .replace(/\\/gim,'&#92;') // Đổi dấu \
                 .replace(/(\r\n|\n|\r)/gim,'&#10;')
               + '[/code]';
+              // Chú ý cả cái đổi [code] nếu tồn tại trong mã nhập vào nhưng có thể bỏ qua vì có ai comment đâu
         // copy to clipboard 
         getId('codeForm').select();
         getId('codeForm').setSelectionRange(0, 99999)
