@@ -30,9 +30,9 @@ var convertLanguage ;
                 .replace(/\>/gim, '&gt;') // Đổi dấu >
                 .replace(/\"/gim,'&quot;') // Đổi dấu "
                 .replace(/\'/gim,'&apos;') // Đổi dấu '
-                .replace(/\[code(.*?)\]|\[\\code(.*?)\]/gim,function(str){
-                  return str.replace(/\[/gim,'~~')
-                            .replace(/\]/gim,'~~')
+                .replace(/\[(.*?)code(.*?)\]/gim,function(str){
+                  return str.replace(/\[/gim,'{{:')
+                            .replace(/\]/gim,':}}')
                 })
                 .replace(/\[/gim,'&#91;') // Đổi dấu [
                 .replace(/\]/gim,'&#93;') // Đổi dấu ]
@@ -169,9 +169,9 @@ Array.prototype.forEach.call(samePostArray, (el) => {
         el.innerHTML = comment.replace(regex,function(str){
           return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
         }).replace(/\[\/code\]/gim,'</code></pre>')
-          .replace(/\[\[code(.*?)\]\]|\[\[\\code(.*?)\]\]/gim,function(str){
-                  return str.replace(/\[\[/gim,'[')
-                            .replace(/\]\]/gim,']')
+          .replace(/\{\{\:(.*?)code(.*?)\:\}\}/gim,function(str){
+                  return str.replace(/\{\{\:/gim,'[')
+                            .replace(/\:\}\}/gim,']')
                 })
           .replace(/\<br\>/gim,'&#10;')
     });
