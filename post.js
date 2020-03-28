@@ -30,13 +30,13 @@ var convertLanguage ;
                 .replace(/\>/gim, '&gt;') // Đổi dấu >
                 .replace(/\"/gim,'&quot;') // Đổi dấu "
                 .replace(/\'/gim,'&apos;') // Đổi dấu '
-                .replace(/\[/gim,'&#91;') // Đổi dấu [
-                .replace(/\]/gim,'&#93;') // Đổi dấu ]
-                .replace(/\\/gim,'&#92;') // Đổi dấu \
                 .replace(/\[code(.*?)\]|\[\\code(.*?)\]/gim,function(str){
                   return str.replace(/\[/gim,'&#91;&#91;')
                             .replace(/\]/gim,'&#93;&#93;')
                 })
+                .replace(/\[/gim,'&#91;') // Đổi dấu [
+                .replace(/\]/gim,'&#93;') // Đổi dấu ]
+                .replace(/\\/gim,'&#92;') // Đổi dấu \
                 .replace(/(\r\n|\n|\r)/gim,'&#10;')
               + '[/code]';
               // Chú ý cả cái đổi [code] nếu tồn tại trong mã nhập vào nhưng có thể bỏ qua vì có ai comment đâu
