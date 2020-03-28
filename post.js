@@ -169,10 +169,11 @@ Array.prototype.forEach.call(samePostArray, (el) => {
         el.innerHTML = comment.replace(regex,function(str){
           return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
         }).replace(/\[\/code\]/gim,'</code></pre>')
+        /*
           .replace(/\[\[code(.*?)\]\]|\[\[\\code(.*?)\]\]/gim,function(str){
                   return str.replace(/\[\[/gim,'[')
                             .replace(/\]\]/gim,']')
-                })
+                })*/
           .replace(/\<br\>/gim,'&#10;')
     });
 })(); 
