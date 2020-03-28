@@ -184,7 +184,7 @@ Array.prototype.forEach.call(samePostArray, (el) => {
 
       document.getElementById("postBody").innerHTML =
           document.getElementById("postBody").innerHTML.replace(
-              /<h([\d])>([^<]+)<\/h([\d])>/gi,
+              /<h([\d])>([^<]+)<\/h([\d])>/gim,
               function (str, openLevel, titleText, closeLevel) {
                   if (openLevel != closeLevel) {
                       return str;
