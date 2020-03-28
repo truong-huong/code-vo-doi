@@ -33,6 +33,10 @@ var convertLanguage ;
                 .replace(/\[/gim,'&#91;') // Đổi dấu [
                 .replace(/\]/gim,'&#93;') // Đổi dấu ]
                 .replace(/\\/gim,'&#92;') // Đổi dấu \
+                .replace(/\[code(.*?)\]|\[\\code(.*?)\]/gim,function(str){
+                  return str.replace(/\[/gim,'&#91;&#91;')
+                            .replace(/\]/gim,'&#93;&#93;')
+                })
                 .replace(/(\r\n|\n|\r)/gim,'&#10;')
               + '[/code]';
               // Chú ý cả cái đổi [code] nếu tồn tại trong mã nhập vào nhưng có thể bỏ qua vì có ai comment đâu
@@ -164,7 +168,12 @@ Array.prototype.forEach.call(samePostArray, (el) => {
         var regex = /\[code(.*?)\]/gim;
         el.innerHTML = comment.replace(regex,function(str){
           return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
-        }).replace(/\[\/code\]/gim,'</code></pre>').replace(/\<br\>/gim,'&#10;')
+        }).replace(/\[\/code\]/gim,'</code></pre>')
+          .replace(/\[\[code(.*?)\]\]|\[\[\\code(.*?)\]\]/gim,function(str){
+                  return str.replace(/\[\[/gim,'[')
+                            .replace(/\]\]/gim,']')
+                })
+          .replace(/\<br\>/gim,'&#10;')
     });
 })(); 
 // Create table of contents
