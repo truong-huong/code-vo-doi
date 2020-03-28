@@ -25,7 +25,16 @@ var convertLanguage ;
             convertLanguage = 'html';
         }
         //document.getElementById('convertCode').innerText 
-        getId('codeForm').value =  '[code class="language-'+convertLanguage+'"]'+a.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ).replace(/\>/gim, '&gt;').replace(/(\r\n|\n|\r)/gim,'&#10;') + '[/code]';
+        getId('codeForm').value =  '[code class="language-'+convertLanguage+'"]'+ 
+              a.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ) // Đổi dấu <
+                .replace(/\>/gim, '&gt;') // Đổi dấu >
+                .replace(/\"/gim,'&quot;') // Đổi dấu "
+                .replace(/\'/gim,'&apos;') // Đổi dấu '
+                .replace(/\[/gim,'&#91;') // Đổi dấu [
+                .replace(/\]/gim,'&#93;') // Đổi dấu ]
+                .replace(/\\/gim,'&#92;') // Đổi dấu \
+                .replace(/(\r\n|\n|\r)/gim,'&#10;')
+              + '[/code]';
         // copy to clipboard 
         getId('codeForm').select();
         getId('codeForm').setSelectionRange(0, 99999)
