@@ -375,3 +375,13 @@ img:hover {
 .for ul li {
     margin: 20px 0;
 }
+.post-header h2 {
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:4;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.post-header h2:before {
+    content: '';
+}
