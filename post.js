@@ -5,7 +5,7 @@
         var clon = temp.content.cloneNode(true);
         var a = doc.createElement("div");
         var b = getId('thanks') ;
-        b.insertAdjacentElement('beforebegin', a);
+        b.insertAdjacentElement('afterend', a);
         a.appendChild(clon) }
     })();
 // Chọn ngôn ngữ để convert
