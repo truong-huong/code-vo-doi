@@ -220,7 +220,7 @@ h2:before {
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
 h3,h4,h5,h6 {
-    font-size: 156.25%;
+    font-size: 137.5%;
 }
 h2:not(:first-child), h3:not(:first-child) {
     margin:20px 0;
