@@ -10,7 +10,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-a[href] {
+#postBody a[href] {
     word-wrap: break-word;
     white-space: pre-wrap;
 }
