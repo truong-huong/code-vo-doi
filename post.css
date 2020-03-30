@@ -75,7 +75,7 @@ label[for=convertCodeForm] i {
 code[class*="language-"], 
 pre[class*="language-"] { 
     font-family:'Space Mono',monospace; 
-    font-weight: bolder; 
+    font-weight: 550; 
   color:black;  
   background:none;  
   text-shadow:0 1px white;  
@@ -192,6 +192,7 @@ pre[class*="language-"] {
 }
 .warning {
   border-left:solid 1.5px #c0580c;
+  color: #FFCC01;
 }
 .warning:before {
   content: "\f071";
@@ -199,6 +200,7 @@ pre[class*="language-"] {
 }
 .ban {
   border-left:solid 1.5px  #eb0f00;
+  color:#CF1F25;
 }
 .ban:before {
   content: "\f05e";
@@ -206,6 +208,7 @@ pre[class*="language-"] {
 }
 .like {
   border-left:solid 1.5px  #3740ff;
+  color: #596D9F;
 }
 .like:before {
   content: "\f164";
