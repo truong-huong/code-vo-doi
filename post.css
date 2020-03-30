@@ -192,7 +192,7 @@ pre[class*="language-"] {
 }
 .warning {
   border-left:solid 1.5px #c0580c;
-  color: #FFCC01;
+  color: #c0580c;
 }
 .warning:before {
   content: "\f071";
