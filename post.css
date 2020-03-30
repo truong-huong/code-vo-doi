@@ -262,3 +262,32 @@ pre[class*="language-"] {
     border-left: solid 1.5px #888;
     padding-left: 10px;
 }
+/* table */
+.python-table {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin:15px 0;
+}
+.python-table * {
+  box-sizing: border-box;
+}
+.table-shell {
+  display: flex;
+  flex-direction: row;
+  margin:5px 0;
+  padding: 10px;
+}
+.table-shell:nth-child(odd) {
+  background: #f1f1f1
+}
+.shell-name , .shell-info {
+  align-items: flex-start;
+}
+.shell-name {
+  width: 25%;
+  font-weight: bolder;
+}
+.shell-info {
+  width: 75%;
+}
