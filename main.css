@@ -335,7 +335,6 @@ img:hover {
     .post-header img ~ h2 {
         font-size:125%;
         -webkit-line-clamp:2;
-        background-color:rgba(76, 175, 80, 0.3)
     }
 }
 @media (max-width:425px) {
