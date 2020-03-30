@@ -263,7 +263,7 @@ pre[class*="language-"] {
     padding-left: 10px;
 }
 /* table */
-.python-table {
+  .python-table {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -278,9 +278,6 @@ pre[class*="language-"] {
   margin:5px 0;
   padding: 10px;
 }
-.table-shell:nth-child(odd) {
-  background: #f1f1f1
-}
 .shell-name , .shell-info {
   align-items: flex-start;
 }
@@ -290,4 +287,31 @@ pre[class*="language-"] {
 }
 .shell-info {
   width: 75%;
+  margin-left: 15px;
+}
+@media (min-width:426px) {
+  .table-shell:nth-child(odd) {
+    background: #f1f1f1
+  }
+  .python-table {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+@media (max-width: 425px) {
+  .table-shell {
+    flex-direction: column;
+  }
+  .shell-name {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  .shell-name:nth-child(odd){
+    background: #f1f1f1;
+    margin-bottom: 10px;
+  }
 }
