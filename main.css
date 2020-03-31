@@ -384,6 +384,7 @@ img:hover {
     -webkit-line-clamp:4;
     overflow:hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 .post-header h2:before {
     content: '';
