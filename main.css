@@ -297,6 +297,8 @@ blockquote:before {
 .post-header img ~ h2 {
     position: absolute;
     display: flex;
+    width: auto;
+    padding: 0 5px;
     bottom: 0;
     left: 0;
     background-color: #fff;
