@@ -17,22 +17,6 @@ var getId = id => doc.getElementById( id );
     });
 
 })();
-// Chia sẻ ra ngoài 
-var share = (social) => {
-    var a = window.location.href ;
-    if (social == 'facebook') {
-        window.open('https://www.facebook.com/dialog/share?app_id=1148726895462441&href='+a, '_blank');
-    }
-    if (social == 'twitter') {
-        window.open('https://twitter.com/intent/tweet?url='+a, '_blank');
-    }
-    if (social == 'pinterest') {
-        window.open('https://www.pinterest.com/pin/create/button/?url='+a, '_blank');
-    }
-    if (social == 'linkedin') {
-        window.open('https://www.linkedin.com/sharing/share-offsite/?url='+a, '_blank');
-    }   
-}
 //Thiết lập màu nền và kích thước phông chữ
 (function(){
     doc.body.setAttribute('font-size',localStorage.getItem("font-size") );
