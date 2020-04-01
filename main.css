@@ -328,7 +328,6 @@ img:hover {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-width: 100%;
         font-size:125%;
     }
 }
