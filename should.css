@@ -107,3 +107,9 @@ footer .container {
     font-size: 156.25%;
     margin-bottom: 10px;
 }
+/* search */
+#search {
+    padding: 2.5px;
+    border-style: none;
+    outline: none;
+}
