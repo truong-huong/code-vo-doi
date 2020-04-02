@@ -37,17 +37,7 @@ label[for=convertCodeForm] i {
     margin-top: 30px;
     text-align: center;
 }
-#thanks:before {
-    content: '';
-    position: relative;
-    left: 50%;
-    margin-left: -180px;
-    margin-bottom: 20px;
-    display: block;
-    width: 320px;
-    background: #ccc;
-    height: 2px;
-}
+
 /* Danh sách nhãn */
 #tag-list {
     list-style: none;
