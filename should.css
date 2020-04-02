@@ -114,3 +114,7 @@ footer .container {
     outline: none;
     font-family:'Space Mono',monospace;
 }
+/* chống ăn trộm */
+.taoditmemay {
+    display: none;
+}
