@@ -41,11 +41,6 @@ var convertLanguage ;
                 .replace(/(\r\n|\n|\r)/gim,'&#10;')
               + '[/code]';
               // Chú ý cả cái đổi [code] nếu tồn tại trong mã nhập vào nhưng có thể bỏ qua vì có ai comment đâu
-        // copy to clipboard 
-        getId('codeForm').select();
-        getId('codeForm').setSelectionRange(0, 99999)
-        document.execCommand("copy");
-        getId('codeForm').value = 'Đã chuyển đổi và sao chép và bộ nhớ tạm. Paste vào comment để sử dụng';
 })})();
 // Chuyên dùng để load code làm đẹp 
 var expand =(obj)=> {
