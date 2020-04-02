@@ -5,6 +5,13 @@
 input[id=convertCodeForm]:checked ~ .convertCodeForm {
     display: block;
 }
+#move-to-main-content {
+  background: #222;
+  color: red;
+  padding: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 #codeForm {
     resize: none;
     margin: 0;
