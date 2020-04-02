@@ -5,7 +5,7 @@
 input[id=convertCodeForm]:checked ~ .convertCodeForm {
     display: block;
 }
-#move-to-main-content {
+a[href*=main-content]{
   background: #222;
   color: #3367d6;
   margin-bottom: 15px;
