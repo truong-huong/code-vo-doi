@@ -7,7 +7,8 @@ input[id=convertCodeForm]:checked ~ .convertCodeForm {
 }
 #move-to-main-content {
   background: #222;
-  color: red;
+  color: #3367d6;
+  margin-bottom: 5px;
   padding: 5px;
   font-weight: 700;
   text-transform: uppercase;
