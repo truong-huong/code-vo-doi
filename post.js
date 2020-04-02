@@ -1,3 +1,4 @@
+try {
 // Hiển thị nhãn
 (function(){
         if ( doc.getElementsByTagName("template").length ) {
@@ -123,7 +124,7 @@ var fixLanguages=(language)=> {
 }
 // Try Catch 
 // Load same post
-try {
+
   // Create table of contents
   (function () {
       var toc = "";
