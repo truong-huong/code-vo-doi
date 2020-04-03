@@ -307,6 +307,8 @@ pre[class*="language-"] {
   #postBody img {
     width: 80%;
     height: auto;
+    display: flex;
+    margin: auto;
   }
 }
 #move-to-main-content {
