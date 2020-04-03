@@ -311,6 +311,14 @@ pre[class*="language-"] {
     margin: auto;
   }
 }
+.hash {
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: #888;
+    margin:10px auto;
+    margin-top: 25px;
+}
 #move-to-main-content {
   display: inline-block;
   background: #222;
