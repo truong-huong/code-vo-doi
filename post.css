@@ -318,3 +318,7 @@ pre[class*="language-"] {
   font-weight: 700;
   text-transform: uppercase;
 }
+#postBody h2, #postBody h3,#postBody h4,#postBody h5,#postBody h6 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
