@@ -322,3 +322,18 @@ pre[class*="language-"] {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+#postBody h2:before {
+  font-size: 87.5%;
+}
+#postBody h3 {
+  font-size: 142%;
+}
+#postBody h4 {
+font-size: 128%;
+}
+#postBody h5 {
+  font-size: 114%;
+}
+#postBody h6 {
+    font-size: 100%;
+}

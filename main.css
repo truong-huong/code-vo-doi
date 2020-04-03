@@ -223,9 +223,6 @@ h2:before {
   font-size: 100%;
   font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
 }
-h3,h4,h5,h6 {
-    font-size: 125%;
-}
 h2:not(:first-child), h3:not(:first-child) {
     margin:20px 0;
 }
