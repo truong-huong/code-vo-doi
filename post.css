@@ -274,13 +274,11 @@ pre[class*="language-"] {
 .shell-name  {
   width: 25%;
   font-weight: bolder;
-}
-.shell-name * {
-  font-weight: bolder;
   background: inherit;
 }
-.shell-name:nth-child(odd) * {
-  background: #f1f1f1;
+.shell-name code[class*="language-"] {
+  font-weight: bolder;
+  background: inherit;
 }
 .shell-info {
   width: 75%;
