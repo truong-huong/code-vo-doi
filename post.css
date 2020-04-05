@@ -279,6 +279,9 @@ pre[class*="language-"] {
   font-weight: bolder;
   background: inherit;
 }
+.shell-name:nth-child(odd) * {
+  background: #f1f1f1;
+}
 .shell-info {
   width: 75%;
   margin-left: 15px;
@@ -306,9 +309,6 @@ pre[class*="language-"] {
   .shell-name:nth-child(odd) {
     background: #f1f1f1;
     margin-bottom: 10px;
-  }
-  .shell-name:nth-child(odd) * {
-    background: #f1f1f1;
   }
   #postBody img {
     width: 100%;
