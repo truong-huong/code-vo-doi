@@ -319,6 +319,20 @@ pre[class*="language-"] {
     margin:10px auto;
     margin-top: 25px;
 }
+.move-to-comment {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 15px auto;
+    align-items: center;
+}
+.move-to-comment a[href*=comment-cover] {
+    width: 250px;
+    text-align: center;
+    background: #888;
+    color: #fff;
+    font-weight: bolder;
+}
 #move-to-main-content {
   display: inline-block;
   background: #222;
