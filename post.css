@@ -271,8 +271,11 @@ pre[class*="language-"] {
 .shell-name , .shell-info {
   align-items: flex-start;
 }
-.shell-name {
+.shell-name  {
   width: 25%;
+  font-weight: bolder;
+}
+.shell-name * {
   font-weight: bolder;
 }
 .shell-info {
