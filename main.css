@@ -298,9 +298,9 @@ blockquote:before {
     padding: 0 5px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #ECEEFF;
     color: #3367d6;
-    border-radius: 5px;
+    border-radius: 2.5px;
     box-shadow:rgba(62, 57, 107, 0.36) 0px 16px 38px -12px, rgba(62, 57, 107, 0.12) 0px 4px 25px 0px, rgba(62, 57, 107, 0.2) 0px 8px 10px -5px;
     border-bottom: solid 2px #000;
     margin-bottom: 7px;
