@@ -156,8 +156,9 @@ var fixLanguages=(language)=> {
 
       document.getElementById("toc").innerHTML += toc;
   })();
+var nhan_dang = [];
 Array.prototype.forEach.call(samePostArray, (el) => {
-    var max_results = Math.floor(10/samePostArray.length)
+  var max_results = Math.floor(10/samePostArray.length)
    var request = new XMLHttpRequest();
    var url = '/feeds/posts/summary/-/' + el + '?alt=json&max-results='+max_results;
    var sparent = getId('same-post');
@@ -169,11 +170,14 @@ Array.prototype.forEach.call(samePostArray, (el) => {
            if (feed.entry) {
                var num_post = feed.entry.length;
                for (i = 0; i < num_post; i++) {
-                   var href = feed.entry[i].link[feed.entry[i].link.length - 1].href;
-                   var title = feed.entry[i].title.$t;
-                   var li = doc.createElement('li');
-                   li.innerHTML = '<a href="' + href + '">' + title + '</a>';
-                   sparent.appendChild(li);
+                   var href = feed.entry[i].link[4].href;
+                   if (!nhan_dang.includes(href)) {
+                      nhan_dang.push(href);
+                      var title = feed.entry[i].title.$t;
+                      var li = doc.createElement('li');
+                      li.innerHTML = '<a href="' + href + '">' + title + '</a>';
+                      sparent.appendChild(li);
+                   }
                }
            } else {
                var error = doc.createElement('li');
