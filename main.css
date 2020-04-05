@@ -307,7 +307,7 @@ blockquote:before {
     display:-webkit-box;
     -webkit-box-orient:vertical;
     overflow:hidden;
-    
+    max-width: 100%;
 }
 .post:not(:last-child) {
     margin-bottom: 50px;
