@@ -277,6 +277,7 @@ pre[class*="language-"] {
 }
 .shell-name * {
   font-weight: bolder;
+  background: inherit;
 }
 .shell-info {
   width: 75%;
@@ -302,9 +303,6 @@ pre[class*="language-"] {
     font-size: 112.5%;
     white-space: nowrap;
     overflow-x: auto; }
-  .shell-name * {
-    background: inherit;
-  }
   .shell-name:nth-child(odd) {
     background: #f1f1f1;
     margin-bottom: 10px;
