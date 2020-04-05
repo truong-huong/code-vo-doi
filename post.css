@@ -292,17 +292,22 @@ pre[class*="language-"] {
   .table-shell {
     flex-direction: column;
   }
-  .shell-name {
+  .shell-name  {
     text-align: center;
     width: 100%;
     padding: 10px;
-    font-size: 137.5%;
+    font-size: 112.5%;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: auto; }
+  .shell-name * {
+    background: inherit;
   }
-  .shell-name:nth-child(odd){
+  .shell-name:nth-child(odd) {
     background: #f1f1f1;
     margin-bottom: 10px;
+  }
+  .shell-name:nth-child(odd) * {
+    background: #f1f1f1;
   }
   #postBody img {
     width: 100%;
