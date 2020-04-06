@@ -125,7 +125,7 @@ var fixLanguages=(language)=> {
               var anchor = titleText.replace(/ /g, "_");
               toc += `<li><a href="#${anchor}">${titleText}</a></li>`;
 
-              return `<h${openLevel} id="${anchor.trim()}>${titleText}</a></h${closeLevel}>`;
+              return `<h${openLevel} id="${anchor.trim()}">${titleText}</a></h${closeLevel}>`;
             }
           );
       (level) && (toc += (new Array(level + 1)).join("</ul>"));
