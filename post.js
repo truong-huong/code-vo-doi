@@ -1,3 +1,5 @@
+// Thằng,Con chó! Mi thấy code tau hay? => Hãy truy cập https://codevodoi.blogspot.com để nhận tips
+// Mi thấy tau code như [xxx]? => Hãy truy cập https://codevodoi.blogspot.com để giúp tau cải thiện!
 try {
 // Hiển thị nhãn
 (function(){
@@ -8,7 +10,7 @@ try {
         var b = getId('thanks') ;
         b.insertAdjacentElement('afterend', a);
         a.appendChild(clon) }
-    })();
+})();
 // Chọn ngôn ngữ để convert
 var convertLanguage ;
 (function(){
@@ -17,7 +19,7 @@ var convertLanguage ;
                convertLanguage = this.getAttribute('data-language');
                clickVirtual(doc.querySelector('label[for=drop-btn-code]'));
                doc.querySelector('label[for=drop-btn-code] a').innerHTML = convertLanguage;
-           })
+    })
     });
     getId('convert-me').addEventListener('click',function(){
         var a = getId('codeForm').value ;
@@ -106,66 +108,66 @@ var fixLanguages=(language)=> {
 	return language;
 }
   // Create table of contents
-  (function () {
-      var toc = "";
-      var level = 0;
-      document.getElementById("postBody").innerHTML =
-          document.getElementById("postBody").innerHTML.replace(
-            /<h([\d])>([^<]+)<\/h([\d])>/gim,
-            function (str, openLevel, titleText, closeLevel) {
-              if (openLevel != closeLevel) {
-                  return str;
-              }
-              if (openLevel > level && level > 0) {
-                  toc += (new Array(openLevel - level + 1)).join("<ul>");
-              } else if (openLevel < level) {
-                  toc += (new Array(level - openLevel + 1)).join("</ul>");
-              }
-              level = parseInt(openLevel);
-              var anchor = titleText.replace(/ /g, "_");
-              toc += `<li><a href="#${anchor}">${titleText}</a></li>`;
-
-              return `<h${openLevel} id="${anchor.trim()}">${titleText}</a></h${closeLevel}>`;
+(function () {
+    var toc = "";
+    var level = 0;
+    document.getElementById("postBody").innerHTML =
+        document.getElementById("postBody").innerHTML.replace(
+          /<h([\d])>([^<]+)<\/h([\d])>/gim,
+          function (str, openLevel, titleText, closeLevel) {
+            if (openLevel != closeLevel) {
+                return str;
             }
-          );
-      (level) && (toc += (new Array(level + 1)).join("</ul>"));
-      document.getElementById("toc").innerHTML += toc;
-  })();
+            if (openLevel > level && level > 0) {
+                toc += (new Array(openLevel - level + 1)).join("<ul>");
+            } else if (openLevel < level) {
+                toc += (new Array(level - openLevel + 1)).join("</ul>");
+            }
+            level = parseInt(openLevel);
+            var anchor = titleText.replace(/ /g, "_");
+            toc += `<li><a href="#${anchor}">${titleText}</a></li>`;
+
+            return `<h${openLevel} id="${anchor.trim()}">${titleText}</a></h${closeLevel}>`;
+          }
+        );
+    (level) && (toc += (new Array(level + 1)).join("</ul>"));
+    document.getElementById("toc").innerHTML += toc;
+})();
 var nhan_dang = [];
 Array.prototype.forEach.call(samePostArray, (el) => {
   var max_results = Math.floor(10/samePostArray.length)
    var request = new XMLHttpRequest();
-   var url = '/feeds/posts/summary/-/' + el + '?alt=json&max-results='+max_results;
+   var url = `/feeds/posts/summary/-/${el}?alt=json&max-results=${max_results}`;
    var sparent = getId('same-post');
    request.open('GET', url, true);
    request.onload = function() {
-       if (request.status >= 200 && request.status < 400) {
-           var data = JSON.parse(request.response);
-           var feed = data.feed;
-           if (feed.entry) {
-               var num_post = feed.entry.length;
-               for (i = 0; i < num_post; i++) {
-                   var href = feed.entry[i].link[4].href;
-                   if (!nhan_dang.includes(href)) {
-                      nhan_dang.push(href);
-                      var title = feed.entry[i].title.$t;
-                      var li = doc.createElement('li');
-                      li.innerHTML = '<a href="' + href + '">' + title + '</a>';
-                      sparent.appendChild(li);
-                   }
-               }
-           } else {
-               var error = doc.createElement('li');
-               error.className = 'notFoundLabel';
-               error.innerHTML = '(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]';
-               sparent.appendChild(error);
-           }
-       } else {
-           var error = doc.createElement('li');
-           error.className = 'notFoundLabel';
-           error.innerHTML = '(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]';
-           sparent.appendChild(error);
-       }
+     if (request.status >= 200 && request.status < 400) {
+         var data = JSON.parse(request.response);
+         var feed = data.feed;
+         if (feed.entry) {
+             var num_post = feed.entry.length;
+             for (i = 0; i < num_post; i++) {
+                 var href = feed.entry[i].link[4].href;
+                 if (!nhan_dang.includes(href)) {
+                    nhan_dang.push(href);
+                    var title = feed.entry[i].title.$t;
+                    var li = doc.createElement('li');
+                    li.innerHTML = `<a href="${href}">${title}</a>`;
+                    sparent.appendChild(li);
+                 }
+             }
+         } else {
+             var error = doc.createElement('li');
+             error.className = 'notFoundLabel';
+             error.innerHTML = `(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]`;
+             sparent.appendChild(error);
+         }
+     } else {
+         var error = doc.createElement('li');
+         error.className = 'notFoundLabel';
+         error.innerHTML = '(-.-) Không có bài nào được tìm thấy [<a href="p/label-not-found.html">tìm hiểu thêm</a>]';
+         sparent.appendChild(error);
+     }
    };
    // Nếu có lỗi xảy ra
    request.onerror = function() { }
