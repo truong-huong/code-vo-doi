@@ -113,8 +113,10 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"], 
 pre[class*="language-"] { 
   background:#f5f2f0; 
-  padding:2.4px 8.8px;
 } 
+:not(pre) > code {
+  padding:2.4px 8.8px;
+};
 /* Inline code */:not(pre) > code[class*="language-"] { 
   padding:.1em; 
   border-radius:.3em; 
