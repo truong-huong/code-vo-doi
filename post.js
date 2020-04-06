@@ -24,20 +24,19 @@ var convertLanguage ;
         (convertLanguage == undefined) && (convertLanguage = 'html');
         //document.getElementById('convertCode').innerText 
         getId('codeForm').value =  '[code class="language-'+convertLanguage+'"]'+ 
-              a.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ) // Đổi dấu <
-                .replace(/\>/gim, '&gt;') // Đổi dấu >
-                .replace(/\"/gim,'&quot;') // Đổi dấu "
-                .replace(/\'/gim,'&apos;') // Đổi dấu '
-                .replace(/\[(.*?)code(.*?)\]/gim,function(str){
-                  return str.replace(/\[/gim,'{{:')
-                            .replace(/\]/gim,':}}')
-                })
-                .replace(/\[/gim,'&#91;') // Đổi dấu [
-                .replace(/\]/gim,'&#93;') // Đổi dấu ]
-                .replace(/\\/gim,'&#92;') // Đổi dấu \
-                .replace(/(\r\n|\n|\r)/gim,'&#10;')
-              + '[/code]';
-              // Chú ý cả cái đổi [code] nếu tồn tại trong mã nhập vào nhưng có thể bỏ qua vì có ai comment đâu
+          a.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ) // Đổi dấu <
+            .replace(/\>/gim, '&gt;') // Đổi dấu >
+            .replace(/\"/gim,'&quot;') // Đổi dấu "
+            .replace(/\'/gim,'&apos;') // Đổi dấu '
+            .replace(/\[(.*?)code(.*?)\]/gim,function(str){
+              return str.replace(/\[/gim,'{{:')
+                        .replace(/\]/gim,':}}')
+            })
+            .replace(/\[/gim,'&#91;') // Đổi dấu [
+            .replace(/\]/gim,'&#93;') // Đổi dấu ]
+            .replace(/\\/gim,'&#92;') // Đổi dấu \
+            .replace(/(\r\n|\n|\r)/gim,'&#10;')
+          + '[/code]';
 })})();
 // Chuyên dùng để load code làm đẹp 
 var expand =(obj)=> {
@@ -117,15 +116,12 @@ var fixLanguages=(language)=> {
                   if (openLevel != closeLevel) {
                       return str;
                   }
-
                   if (openLevel > level && level > 0) {
                       toc += (new Array(openLevel - level + 1)).join("<ul>");
                   } else if (openLevel < level) {
                       toc += (new Array(level - openLevel + 1)).join("</ul>");
                   }
-
                   level = parseInt(openLevel);
-
                   var anchor = titleText.replace(/ /g, "_");
                   toc += "<li><a href=\"#" + anchor + "\">" + titleText
                       + "</a></li>";
@@ -134,11 +130,7 @@ var fixLanguages=(language)=> {
                       + titleText + "</a></h" + closeLevel + ">";
               }
           );
-
-      if (level) {
-          toc += (new Array(level + 1)).join("</ul>");
-      }
-
+      (level) && (toc += (new Array(level + 1)).join("</ul>"));
       document.getElementById("toc").innerHTML += toc;
   })();
 var nhan_dang = [];
