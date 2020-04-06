@@ -21,10 +21,7 @@ var convertLanguage ;
     });
     getId('convert-me').addEventListener('click',function(){
         var a = getId('codeForm').value ;
-        
-        if ( convertLanguage == undefined ) {
-            convertLanguage = 'html';
-        }
+        (convertLanguage == undefined) && (convertLanguage = 'html');
         //document.getElementById('convertCode').innerText 
         getId('codeForm').value =  '[code class="language-'+convertLanguage+'"]'+ 
               a.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ) // Đổi dấu <
@@ -91,9 +88,7 @@ var checkCodeLanguage=()=> {
   if (doc.querySelectorAll('code[class*=language-]').length) {
     Array.prototype.forEach.call(doc.querySelectorAll('code[class*=language-]'), (el, i) => {
       let language = 'https://cdn.jsdelivr.net/gh/truong-huong/nullshell-js/prism-' + fixLanguages(el.getAttribute('class').trim().replace('language-', '').trim()) + '.min.js';
-      if (codeArray.includes(language) == true) {} else {
-          codeArray.push(language);
-      }
+      (!codeArray.includes(language)) && codeArray.push(language);
     })
     loadLanguageScript(codeArray)
 }}
@@ -102,29 +97,19 @@ var loadLanguageScript = (scripts) => {
 	var hongtham = doc.createElement('script');
 	doc.head.appendChild(hongtham);
 	hongtham.onload = () => {
-		if (codeArray.length) {
-		  loadLanguageScript(codeArray);
-		} else {
-		  Prism.highlightAll();
-		}
+		(codeArray.length) && loadLanguageScript(codeArray) || Prism.highlightAll();
 	};
 	hongtham.src = script;
 }
 var fixLanguages=(language)=> {
 	var language = language;
-	if (languages_array[language] != undefined) {
-	  language = languages_array[language];
-	}
+	(languages_array[language] != undefined) && (language = languages_array[language]);
 	return language;
 }
-// Try Catch 
-// Load same post
-
   // Create table of contents
   (function () {
       var toc = "";
       var level = 0;
-
       document.getElementById("postBody").innerHTML =
           document.getElementById("postBody").innerHTML.replace(
               /<h([\d])>([^<]+)<\/h([\d])>/gim,
