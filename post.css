@@ -64,11 +64,10 @@ label[for=convertCodeForm] i {
 /* lam dep code */  
 code[class*="language-"], 
 pre[class*="language-"] { 
-    font-family:'Menlo Regular','Space Mono',monospace; 
-    font-weight: 550; 
+  font-family:'Menlo Regular','Space Mono',monospace; 
+  font-weight: 550; 
   color: #5b6ac4;
-  background:none;  
-  text-shadow:0 1px white;  
+  background:none;    
   text-align:left;  
   white-space:pre;  
   word-spacing:normal;  
@@ -119,6 +118,7 @@ pre[class*="language-"] {
   border-radius: 2.5px;
   background:#f5f2f0; 
   color: #5b6ac4;
+  white-space: pre-wrap;
 };
 /* Inline code */:not(pre) > code[class*="language-"] { 
   padding:.1em; 
