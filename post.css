@@ -118,6 +118,7 @@ pre[class*="language-"] {
   border-radius: 2.5px;
   background:#f5f2f0; 
   color: #5b6ac4;
+  word-wrap: break-word;
   white-space: pre-wrap;
 };
 /* Inline code */:not(pre) > code[class*="language-"] { 
