@@ -109,17 +109,18 @@ pre[class*="language-"] {
   margin:.5em 0;  
   overflow:auto;  
 } 
+:not(pre) > code[class*="language-"], 
 pre[class*="language-"] { 
   background:#f5f2f0; 
 } 
-:not(pre) > code , :not(pre) > code[class*="language-"] {
+:not(pre) > code {
   padding: 2.4px 8.8px;
   border-radius: 2.5px;
   background: #f5f2f0;
   color: #5b6ac4;
   word-wrap: break-word;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 100%;
   white-space: pre-wrap;
   margin:auto 1.5px;
 };
