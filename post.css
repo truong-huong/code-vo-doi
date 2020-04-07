@@ -117,6 +117,7 @@ pre[class*="language-"] {
 :not(pre) > code {
   padding:2.4px 8.8px;
   border-radius: 2.5px;
+  background:#f5f2f0; 
 };
 /* Inline code */:not(pre) > code[class*="language-"] { 
   padding:.1em; 
