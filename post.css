@@ -81,7 +81,6 @@ pre[class*="language-"] {
   -moz-hyphens:none;  
   -ms-hyphens:none; 
   hyphens:none;
-
 } 
 pre[class*="language-"]::-moz-selection,  
 pre[class*="language-"]::-moz-selection,  
@@ -317,12 +316,6 @@ pre[class*="language-"] {
   .shell-name:nth-child(odd) {
     background: #f1f1f1;
     margin-bottom: 10px;
-  }
-  #postBody img {
-    width: 100%;
-    height: auto;
-    display: flex;
-    margin: auto;
   }
 }
 .hash {
