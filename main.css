@@ -290,7 +290,7 @@ blockquote:before {
 }
 .post img {
     width: 100%;
-    height: 140px;
+    height: 180px;
     object-fit: cover;   
 }
 .post-header picture ~ h2 {
