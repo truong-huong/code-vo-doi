@@ -3,42 +3,39 @@
 try {
 // Hiển thị nhãn
 (function(){
-        if ( doc.getElementsByTagName("template").length ) {
-        var temp = doc.getElementsByTagName("template")[0];
-        var clon = temp.content.cloneNode(true);
-        var a = doc.createElement("div");
-        var b = getId('thanks') ;
-        b.insertAdjacentElement('afterend', a);
-        a.appendChild(clon) }
+  if ( doc.getElementsByTagName("template").length ) {
+  var temp = doc.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  getId('thanks').insertAdjacentElement('afterend', doc.createElement("div"));
+  doc.createElement("div").appendChild(clon) }
 })();
 // Chọn ngôn ngữ để convert
 var convertLanguage ;
 (function(){
     Array.prototype.forEach.call(doc.querySelectorAll('a[data-language]'), (el) => {
-        el.addEventListener('click', function(){
-               convertLanguage = this.getAttribute('data-language');
-               clickVirtual(doc.querySelector('label[for=drop-btn-code]'));
-               doc.querySelector('label[for=drop-btn-code] a').innerHTML = convertLanguage;
+      el.addEventListener('click', function(){
+         convertLanguage = this.getAttribute('data-language');
+         clickVirtual(doc.querySelector('label[for=drop-btn-code]'));
+         doc.querySelector('label[for=drop-btn-code] a').innerHTML = convertLanguage;
     })
     });
     getId('convert-me').addEventListener('click',function(){
-        var a = getId('codeForm').value ;
-        (convertLanguage == undefined) && (convertLanguage = 'html');
-        //document.getElementById('convertCode').innerText 
-        getId('codeForm').value =  '[code class="language-'+convertLanguage+'"]'+ 
-          a.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ) // Đổi dấu <
-            .replace(/\>/gim, '&gt;') // Đổi dấu >
-            .replace(/\"/gim,'&quot;') // Đổi dấu "
-            .replace(/\'/gim,'&apos;') // Đổi dấu '
-            .replace(/\[(.*?)code(.*?)\]/gim,function(str){
-              return str.replace(/\[/gim,'{{:')
-                        .replace(/\]/gim,':}}')
-            })
-            .replace(/\[/gim,'&#91;') // Đổi dấu [
-            .replace(/\]/gim,'&#93;') // Đổi dấu ]
-            .replace(/\\/gim,'&#92;') // Đổi dấu \
-            .replace(/(\r\n|\n|\r)/gim,'&#10;')
-          + '[/code]';
+      (convertLanguage == undefined) && (convertLanguage = 'html');
+      //document.getElementById('convertCode').innerText 
+      getId('codeForm').value =  '[code class="language-'+convertLanguage+'"]'+ 
+        getId('codeForm').value.replace(/\&/gim, '&amp;').replace( /\</gim , '&lt;' ) // Đổi dấu <
+          .replace(/\>/gim, '&gt;') // Đổi dấu >
+          .replace(/\"/gim,'&quot;') // Đổi dấu "
+          .replace(/\'/gim,'&apos;') // Đổi dấu '
+          .replace(/\[(.*?)code(.*?)\]/gim,function(str){
+            return str.replace(/\[/gim,'{{:')
+                      .replace(/\]/gim,':}}')
+          })
+          .replace(/\[/gim,'&#91;') // Đổi dấu [
+          .replace(/\]/gim,'&#93;') // Đổi dấu ]
+          .replace(/\\/gim,'&#92;') // Đổi dấu \
+          .replace(/(\r\n|\n|\r)/gim,'&#10;')
+        + '[/code]';
 })})();
 // Chuyên dùng để load code làm đẹp 
 var expand =(obj)=> {
@@ -112,24 +109,24 @@ var fixLanguages=(language)=> {
     var toc = "";
     var level = 0;
     document.getElementById("postBody").innerHTML =
-        document.getElementById("postBody").innerHTML.replace(
-          /<h([\d])>([^<]+)<\/h([\d])>/gim,
-          function (str, openLevel, titleText, closeLevel) {
-            if (openLevel != closeLevel) {
-                return str;
-            }
-            if (openLevel > level && level > 0) {
-                toc += (new Array(openLevel - level + 1)).join("<ul>");
-            } else if (openLevel < level) {
-                toc += (new Array(level - openLevel + 1)).join("</ul>");
-            }
-            level = parseInt(openLevel);
-            var anchor = titleText.replace(/ /g, "_");
-            toc += `<li><a href="#${anchor}">${titleText}</a></li>`;
-
-            return `<h${openLevel} id="${anchor.trim()}">${titleText}</a></h${closeLevel}>`;
+      document.getElementById("postBody").innerHTML.replace(
+        /<h([\d])>([^<]+)<\/h([\d])>/gim,
+        function (str, openLevel, titleText, closeLevel) {
+          if (openLevel != closeLevel) {
+              return str;
           }
-        );
+          if (openLevel > level && level > 0) {
+              toc += (new Array(openLevel - level + 1)).join("<ul>");
+          } else if (openLevel < level) {
+              toc += (new Array(level - openLevel + 1)).join("</ul>");
+          }
+          level = parseInt(openLevel);
+          var anchor = titleText.replace(/ /g, "_");
+          toc += `<li><a href="#${anchor}">${titleText}</a></li>`;
+
+          return `<h${openLevel} id="${anchor.trim()}">${titleText}</a></h${closeLevel}>`;
+        }
+      );
     (level) && (toc += (new Array(level + 1)).join("</ul>"));
     document.getElementById("toc").innerHTML += toc;
 })();
