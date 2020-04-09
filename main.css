@@ -296,7 +296,7 @@ blockquote:before {
        object-fit: cover;
         
 }
-.post-header img ~ h2 {
+.post-header picture ~ h2 {
     position: absolute;
     display: flex;
     width: auto;
@@ -330,7 +330,7 @@ img:hover {
   transition:all .3s ease-in-out;
 }
 @media (min-width: 1000px) {
-    .post-header img ~ h2 {
+    .post-header picture ~ h2 {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -338,7 +338,7 @@ img:hover {
     }
 }
 @media (max-width: 1000px) {
-    .post-header img ~ h2 {
+    .post-header picture ~ h2 {
         font-size:125%;
         -webkit-line-clamp:2;
     }
