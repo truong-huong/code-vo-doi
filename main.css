@@ -33,33 +33,20 @@ body {
     font-display:swap;
 
     /* */
-    letter-spacing:2.5px;
-  background-attachment:initial;
-  background-clip:initial;
-  background-image:initial;
-  background-origin:initial;
-  background-position:initial;
-  background-repeat:initial;
-  background-size:initial;
+    letter-spacing:1.5px;line-height: 1.5;
   border-radius:6px;
   border:0 solid;
-  box-sizing:inherit;
   font-family: 'Roboto Slab';
-  font-size:16px;
   hyphens:none;
   line-height:1.8 !important;
   margin-bottom:0.5em;
   margin-top:0.5em;
-  overflow-wrap:normal;
-  overflow:auto;
   padding-bottom:1.3rem !important;
   padding-left:2rem;
   padding-right:1em;
   padding-top:1.5rem !important;
   position:relative;
   tab-size:4;
-  word-break:normal;
-  z-index:1;
 }
 #post-info a[href]:not([class]) {
     border-bottom: dotted 1.5px;
