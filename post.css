@@ -66,8 +66,7 @@ code[class*="language-"],
 pre[class*="language-"] { 
   font-family:'Roboto Slab';
   font-weight: 550; 
-  color: #5b6ac4;
-  background:none;    
+  color: #5b6ac4;   
   text-align:left;  
   white-space:pre;  
   word-spacing:normal;  
@@ -107,9 +106,11 @@ pre[class*="language-"] {
   padding:1em;  
   margin:.5em 0;  
   overflow:auto;  
+  background-color: #282c34;
+  border-radius:10px;
+  font-weight: bold;
 } 
-:not(pre) > code[class*="language-"], 
-pre[class*="language-"] { 
+:not(pre) > code[class*="language-"] { 
   background:#f5f2f0; 
 } 
 :not(pre) > code {
