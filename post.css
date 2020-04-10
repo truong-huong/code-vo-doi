@@ -109,7 +109,10 @@ pre[class*="language-"] {
   background-color: #282c34;
   border-radius:10px;
   font-weight: bold;
-} 
+}
+pre[class*="language-"] ~ pre[class*="language-"] {
+  margin-top: 40px;
+  }
 :not(pre) > code[class*="language-"] { 
   background:#f5f2f0; 
 } 
