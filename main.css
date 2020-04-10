@@ -34,17 +34,9 @@ body {
 
     /* */
     letter-spacing:1.5px;line-height: 1.5;
-  border-radius:6px;
-  border:0 solid;
   font-family: 'Roboto Slab';
   hyphens:none;
   line-height:1.8 !important;
-  margin-bottom:0.5em;
-  margin-top:0.5em;
-  padding-bottom:1.3rem !important;
-  padding-left:2rem;
-  padding-right:1em;
-  padding-top:1.5rem !important;
   position:relative;
   tab-size:4;
 }
