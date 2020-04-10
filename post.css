@@ -64,7 +64,7 @@ label[for=convertCodeForm] i {
 /* lam dep code */  
 code[class*="language-"], 
 pre[class*="language-"] { 
-  /*font-family:'Space Mono',monospace; */
+  font-family:'Roboto Slab';
   font-weight: 550; 
   color: #5b6ac4;
   background:none;    
