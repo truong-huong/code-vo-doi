@@ -103,15 +103,12 @@ code[class*="language-"]::selection {
 /* Code blocks */ 
 pre[class*="language-"] { 
   padding:1em;  
-  margin:.5em 0;  
+  margin:35px auto;  
   overflow:auto;  
   background-color: #282c34;
   border-radius:10px;
   font-weight: bold;
 }
-pre[class*="language-"] ~ pre[class*="language-"] {
-  margin-top: 40px;
-  }
 :not(pre) > code[class*="language-"] { 
   background:#f5f2f0; 
 } 
