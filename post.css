@@ -107,7 +107,6 @@ pre[class*="language-"] {
   overflow:auto;  
   background-color: #282c34;
   border-radius:10px;
-  font-weight: bold;
 }
 :not(pre) > code[class*="language-"] { 
   background:#f5f2f0; 
