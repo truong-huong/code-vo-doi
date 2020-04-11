@@ -65,7 +65,8 @@ label[for=convertCodeForm] i {
 code[class*="language-"], 
 pre[class*="language-"] { 
   font-family:'Roboto Slab';
-  color: #5b6ac4;   
+  color: #5b6ac4;  
+  font-weight: 400; 
   text-align:left;  
   white-space:pre;  
   word-spacing:normal;  
