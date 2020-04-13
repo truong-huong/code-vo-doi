@@ -160,6 +160,9 @@ header section:first-child {
 #pink {
     background:hsla(0, 100%, 90%, 0.3);
 }
+[theme-color] {
+    transition:all 1.2s ease-in-out;
+}
 [theme-color=dark] header ,
 [theme-color=dark] .prev a,
 [theme-color=dark] #about-me,
