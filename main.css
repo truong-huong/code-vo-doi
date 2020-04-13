@@ -157,19 +157,37 @@ header section:first-child {
     background-color: #2d3143;
     color: #62677f;
 }
-[theme-color=dark] header ,[theme-color=dark] .prev a,[theme-color=dark] #about-me,[theme-color=dark] #tags {
+#pink {
+    background:hsla(0, 100%, 90%, 0.3);
+}
+[theme-color=dark] header ,
+[theme-color=dark] .prev a,
+[theme-color=dark] #about-me,
+[theme-color=dark] #tags,
+[theme-color=dark] #toc,
+[theme-color=dark] .comment-cover {
     background-color:  #2d3143;
 }
 [theme-color=dark] .prev a {
     color: #62677f;
 }
-#pink {
-    background:hsla(0, 100%, 90%, 0.3);
-}
-[theme-color=pink] , [theme-color=pink] header ,[theme-color=pink] .prev a,[theme-color=pink] #about-me,[theme-color=pink] #tags {
+[theme-color=pink] ,
+[theme-color=pink] header ,
+[theme-color=pink] .prev a,
+[theme-color=pink] #about-me,
+[theme-color=pink] #tags,
+[theme-color=pink] #toc,
+[theme-color=pink] .comment-cover {
     background-color: hsla(0, 100%, 90%, 0.3);
 }
-#sepia , [theme-color=sepia],[theme-color=sepia] header ,[theme-color=sepia] .prev a,[theme-color=sepia] #about-me,[theme-color=sepia] #tags  {
+#sepia ,
+[theme-color=sepia],
+[theme-color=sepia] header ,
+[theme-color=sepia] .prev a,
+[theme-color=sepia] #about-me,
+[theme-color=sepia] #tags,
+[theme-color=sepia] #toc,
+[theme-color=sepia] .comment-cover  {
     background:#f3eacb;
 }
 .share a:hover , .drop-btn-bottom-left a:hover{
