@@ -6,7 +6,7 @@
   var temp = doc.getElementsByTagName("template")[0];
   var clon = temp.content.cloneNode(true);
   var el = doc.createElement("div").appendChild(clon);
-  getId('thanks').insertAdjacentHTML('afterend', el)}
+  getId('thanks').insertAdjacentElement('afterend', el)}
 })();
 // Chọn ngôn ngữ để convert
 var convertLanguage ;
