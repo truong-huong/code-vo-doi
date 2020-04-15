@@ -172,6 +172,7 @@ Array.prototype.forEach.call(samePostArray, (el) => {
 });
 // Kiểm tra comment có code hay những thứ hay ho khác hay không 
 (function(){
+  if (getId('comments').length) {
     Array.prototype.forEach.call(getId('comments').querySelectorAll('.somebody-said'), (el) => {
       var comment = el.innerHTML ;
       var regex = /\[code(.*?)\]/gim;
@@ -184,6 +185,7 @@ Array.prototype.forEach.call(samePostArray, (el) => {
               })
         .replace(/\<br\>/gim,'&#10;')
     });
+  }
 })(); 
 checkCodeLanguage();
    
