@@ -1,6 +1,5 @@
 // Thằng,Con chó! Mi thấy code tau hay? => Hãy truy cập https://codevodoi.blogspot.com để nhận tips
 // Mi thấy tau code như [xxx]? => Hãy truy cập https://codevodoi.blogspot.com để giúp tau cải thiện!
-try {
 // Hiển thị nhãn
 (function(){
   if ( doc.getElementsByTagName("template").length ) {
@@ -37,6 +36,7 @@ var convertLanguage ;
           .replace(/(\r\n|\n|\r)/gim,'&#10;')
         + '[/code]';
 })})();
+}
 // Chuyên dùng để load code làm đẹp 
 var expand =(obj)=> {
   var keys = Object.keys(obj);
@@ -104,7 +104,7 @@ var fixLanguages=(language)=> {
 	(languages_array[language] != undefined) && (language = languages_array[language]);
 	return language;
 }
-  // Create table of contents
+// Create table of contents
 (function () {
     var toc = "";
     var level = 0;
@@ -174,18 +174,17 @@ Array.prototype.forEach.call(samePostArray, (el) => {
 // Kiểm tra comment có code hay những thứ hay ho khác hay không 
 (function(){
     Array.prototype.forEach.call(getId('comments').querySelectorAll('.somebody-said'), (el) => {
-        var comment = el.innerHTML ;
-        var regex = /\[code(.*?)\]/gim;
-        el.innerHTML = comment.replace(regex,function(str){
-          return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
-        }).replace(/\[\/code\]/gim,'</code></pre>')
-          .replace(/\{\{\:(.*?)code(.*?)\:\}\}/gim,function(str){
-                  return str.replace(/\{\{\:/gim,'[')
-                            .replace(/\:\}\}/gim,']')
-                })
-          .replace(/\<br\>/gim,'&#10;')
+      var comment = el.innerHTML ;
+      var regex = /\[code(.*?)\]/gim;
+      el.innerHTML = comment.replace(regex,function(str){
+        return str.replace(/\[/gim,'<pre><').replace(/\]/gim,'>')
+      }).replace(/\[\/code\]/gim,'</code></pre>')
+        .replace(/\{\{\:(.*?)code(.*?)\:\}\}/gim,function(str){
+                return str.replace(/\{\{\:/gim,'[')
+                          .replace(/\:\}\}/gim,']')
+              })
+        .replace(/\<br\>/gim,'&#10;')
     });
 })(); 
-}catch(e) {}
 checkCodeLanguage();
    
