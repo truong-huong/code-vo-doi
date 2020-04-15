@@ -2,11 +2,10 @@
 // Mi thấy tau code như [xxx]? => Hãy truy cập https://codevodoi.blogspot.com để giúp tau cải thiện!
 // Hiển thị nhãn
 (function(){
-  if ( doc.getElementsByTagName("template").length ) {
+  if ( doc.getElementsByTagName("template") ) {
   var temp = doc.getElementsByTagName("template")[0];
   var clon = temp.content.cloneNode(true);
-  getId('thanks').insertAdjacentElement('afterend', doc.createElement("div"));
-  doc.createElement("div").appendChild(clon) }
+  getId('thanks').insertAdjacentHTML('afterend', clon); }
 })();
 // Chọn ngôn ngữ để convert
 var convertLanguage ;
