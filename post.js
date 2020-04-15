@@ -36,7 +36,6 @@ var convertLanguage ;
           .replace(/(\r\n|\n|\r)/gim,'&#10;')
         + '[/code]';
 })})();
-}
 // Chuyên dùng để load code làm đẹp 
 var expand =(obj)=> {
   var keys = Object.keys(obj);
