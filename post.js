@@ -5,7 +5,7 @@
   if ( doc.getElementsByTagName("template") ) {
   var temp = doc.getElementsByTagName("template")[0];
   var clon = temp.content.cloneNode(true);
-  getId('thanks').insertAdjacentHTML('afterend', clon); }
+  getId('thanks').insertAdjacentHTML('afterend',doc.createElement("div").appendChild(clon))}
 })();
 // Chọn ngôn ngữ để convert
 var convertLanguage ;
