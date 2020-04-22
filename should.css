@@ -114,10 +114,12 @@ footer .container {
     outline: none;
     font-family:'Space Mono',monospace;
 }
-/* for-container */
-
-
+form[action*=/search] , form[action*=/search] * {
+    background: inherit;
+}
 /* chống ăn trộm */
 .taoditmemay {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
 }
