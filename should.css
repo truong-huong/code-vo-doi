@@ -122,5 +122,7 @@ form[action*=/search] , form[action*=/search] * {
     opacity: 0;
     height: 0px;
     width: 0px;
-    display: block;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
 }
