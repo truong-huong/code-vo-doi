@@ -243,7 +243,7 @@ blockquote:before {
   color: #3740ff;
 }
 .like:before {
-  content: "\f164";
+  content: "\f005";
 }
 .like:after {
   background-color: #3740ff;
