@@ -148,24 +148,20 @@ pre[class*="language-"] {
 .token.deleted {
   color: #e2777a;
 }
-
 .token.function-name {
   color: #6196cc;
 }
-
 .token.boolean,
 .token.number,
 .token.function {
   color: #f08d49;
 }
-
 .token.property,
 .token.class-name,
 .token.constant,
 .token.symbol {
   color: #f8c555;
 }
-
 .token.selector,
 .token.important,
 .token.atrule,
@@ -173,7 +169,6 @@ pre[class*="language-"] {
 .token.builtin {
   color: #cc99cd;
 }
-
 .token.string,
 .token.char,
 .token.attr-value,
@@ -181,13 +176,11 @@ pre[class*="language-"] {
 .token.variable {
   color: #7ec699;
 }
-
 .token.operator,
 .token.entity,
 .token.url {
   color: #67cdcc;
 }
-
 .token.important,
 .token.bold {
   font-weight: bold;
@@ -195,11 +188,9 @@ pre[class*="language-"] {
 .token.italic {
   font-style: italic;
 }
-
 .token.entity {
   cursor: help;
 }
-
 .token.inserted {
   color: green;
 }
@@ -213,7 +204,7 @@ pre[class*="language-"] {
 }
 .ban {
   border-left:solid 1.5px  #eb0f00;
-  color:#CF1F25;
+  color: #eb0f00;
 }
 .ban:before {
   content: "\f05e";
@@ -221,7 +212,7 @@ pre[class*="language-"] {
 }
 .like {
   border-left:solid 1.5px  #3740ff;
-  color: #596D9F;
+  color: #3740ff;
 }
 .like:before {
   content: "\f164";
