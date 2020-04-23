@@ -349,6 +349,7 @@ blockquote:before {
     -webkit-box-orient:vertical;
     -webkit-line-clamp:4;
     overflow:hidden;
+    color:#5f6368;
 }
 img:hover {
   -webkit-filter:grayscale(1); /* Safari 6.0 - 9.0 */
