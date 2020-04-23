@@ -117,24 +117,6 @@ footer .container {
 form[action*=/search] , form[action*=/search] * {
     background: inherit;
 }
-div > blockquote:before {
-  margin-bottom:5px;
-  margin: 0 5px;
-  padding:0 10px;
-  width: 20px;
-  font-size: 156.25%;
-  font-weight: 900;
-}
-blockquote {
-  border-top: solid 2px #3d7e9a;
-  padding: 15px;
-  margin: 20px 0;
-  background-color: #f3f3f3;
-}
-blockquote:before {
-    font-weight: 900;
-    font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
-}
 /* chống ăn trộm */
 .taoditmemay {
     opacity: 0;

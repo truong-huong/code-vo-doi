@@ -194,33 +194,66 @@ pre[class*="language-"] {
 .token.inserted {
   color: green;
 }
+/* */
+div > blockquote {
+  margin: 40px 0 32px;
+  position: relative;
+  padding: 24px 0 0 10px;
+}
+div > blockquote:after {
+  content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+div > blockquote:before {
+  margin: 5px 0px;
+  padding:0 20px 0 0 ;
+  width: 20px;
+  display: inline-block;
+  float: left;
+  font-size: 156.25%;
+  font-weight: 900;
+}
+blockquote:before {
+    font-weight: 900;
+    font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
+}
 .warning {
-  border-left:solid 1.5px #c0580c;
   color: #c0580c;
 }
+.warning:after {
+  background-color: #c0580c;
+}
 .warning:before {
-  content: "\f071";
-  color: #FFCC01;
+  content: "\f071"; 
 }
 .ban {
-  border-left:solid 1.5px  #eb0f00;
   color: #eb0f00;
 }
 .ban:before {
   content: "\f05e";
-  color:#CF1F25;
+}
+.ban:after {
+  background-color: #eb0f00;
 }
 .like {
-  border-left:solid 1.5px  #3740ff;
   color: #3740ff;
 }
 .like:before {
   content: "\f164";
-  color: #596D9F;
+}
+.like:after {
+  background-color: #3740ff;
 }
 .wikipedia:before {
   content: "\f266";
   color: #000;
+}
+.wikiedia:after {
+  background-color: #000;
 }
 /* Comments */
 #comment-list {
