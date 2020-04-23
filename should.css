@@ -113,6 +113,7 @@ footer .container {
     border-style: none;
     outline: none;
     font-family:'Space Mono',monospace;
+    background-color: inherit;
 }
 form[action*=/search] , form[action*=/search] * {
     background: inherit;
