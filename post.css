@@ -64,11 +64,8 @@ label[for=convertCodeForm] i {
 /* lam dep code */  
 code[class*="language-"], 
 pre[class*="language-"] { 
-  font-family:'Roboto Slab';
   color: #5b6ac4;  
-  font-weight: 400; 
   text-align:left;  
-  white-space:pre; 
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   word-spacing:normal;  
   word-break:normal;  
@@ -81,7 +78,10 @@ pre[class*="language-"] {
   -moz-hyphens:none;  
   -ms-hyphens:none; 
   hyphens:none;
-} 
+}
+pre[class*="language-"] {
+  white-space:pre;
+}
 pre[class*="language-"]::-moz-selection,  
 pre[class*="language-"]::-moz-selection,  
 code[class*="language-"]::-moz-selection, 
