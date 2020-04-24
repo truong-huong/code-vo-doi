@@ -5,8 +5,8 @@ function checkVideoRatio() {
  	Array.prototype.forEach.call(_video_iframe, (el) => {
 	    var _videoHeight = parseInt(el.height,10);
 	   	var _videoWidth = parseInt(el.width,10);
-	   	var _oldVideoWidth = parseInt(el.getAttribute('data-width').replace('px',''),10);
-	   	var _oldVideoHeight = parseInt(el.getAttribute('data-height').replace('px',''),10);
+	   	var _oldVideoWidth = parseInt(el.getAttribute('data-width');
+	   	var _oldVideoHeight = parseInt(el.getAttribute('data-height');
 	   	var _video_windowWidth = window.outerWidth;
 	   	if (_video_windowWidth < _oldVideoWidth) {
 	   		el.width = _video_windowWidth+'px';
