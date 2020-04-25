@@ -13,7 +13,7 @@ header [background-icon] {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAtFBMVEXn+N3////p+d/l99qOxWOLxWDA3qjp+eDg9NTH5rH+/v3u9ue+4aWhz36HwlqGwViEwFb5/PfT7cKt1o6k0oKVyG2TyWrx+Ozk8dre89HZ68rK5LbJ57S53Z623Zum0oWdz3iYynH3+/Tc8s6v2ZGazXOQx2eJw113uUT8/frm+NzZ8MnN6bmr1Iyr1oun1IaczXf1+vHy+O3Q677D5KzB46iz25Xj9dfg79TV7sV+vU6/4ach8O8ZAAABrElEQVQoz22T13qjMBCFByFhejG992LHvW2Sff/3WoIEcdY5N9I3/4zQHA3AzbLehbz0XC2NztyiGZ/jk05a53AsOt0VlJ9YjkojT0IeENqK14bg2HrClmBqa0BAhVDdmPvLgq3MTHkGmRKi+QzLgnmH/4TWJK8ojswUXoR2hjDhc6nx8AvP9OALx8YawS8SPVvmwDo5QMXzdPnDytVe4eBdTxC9THv6+Co6ejfK6z7mQCAhTT4MQ4MAScPg0fptsecgb3l21ufnfcTrfjiyyKOsoMznT+92U3gtiTSwUrEP3eHbzHlh+IYVcI+vbTF8H6u1YvtKmDFuBWknTvsPO5wv8ZDoxnFkiPTrdPobOcwtGNSJEAscXLyG2pLotrhCK141MpomGcHouUBqmCQRL5XUk54ycwttM2IFNxSjN7sj2LkCKzaj6b1jM2Edg1iLgFgutjcTtvbk5UlR2LoKm7WLRnYLZ7UtDpZJ9XMjE9E35CXsBk9zXgm6p9ZbtBoFoVSYtvLjL5EDu++Lh3r7mznY0KINt2CWoMT7ssPYdYSAQYaXDMtX/ErmnvQPNJAgPw3oQk8AAAAASUVORK5CYII=");
 }
 [background-icon=home]:before {
-    content: '🏛';
+    content: '🏡';
 }
 [background-icon=linux]:before {
     content: '🐧';
