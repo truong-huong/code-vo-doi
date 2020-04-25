@@ -250,13 +250,14 @@ article {
 h2 {
     color: #596D9F;
     font-size: 156.25%;
+    position: relative;
 }
 h2:before {
-  content: "\f292";
-  margin-right: 2.5px;
-  color: #ADB5BD;
-  font-size: 100%;
-  font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
+    content: "#";
+    color: #CCC;
+    margin-right: 8px;
+    margin-left: -20px;
+    font-weight: normal;
 }
 h2:not(:first-child), h3:not(:first-child) {
     margin:20px 0;
