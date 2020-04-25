@@ -252,7 +252,7 @@ h2 {
     font-size: 156.25%;
     position: relative;
 }
-:not(.post-header) h2:before {
+#post-body h2:before {
     content: "#";
     color: #CCC;
     margin-right: 8px;
