@@ -303,7 +303,7 @@ h2:not(:first-child), h3:not(:first-child) {
 }
 .post img {
     width: 100%;
-    height: 180px;
+    height: 140px;
     object-fit: cover;   
 }
 .post-header picture ~ h2 , .post-header img ~ h2 {
