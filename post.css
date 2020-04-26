@@ -253,39 +253,41 @@ blockquote:before {
   background-color: #000;
 }
 /* Comments */
-.somebody img {
-    width:30px;
-    height:30px;
-    border-radius: 10px;
+.comments {
+    padding: 15px;
+}
+.commentSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.commenterImage {
     margin-right: 10px;
 }
-#comment-list {
-    margin-top: 20px;
-    border-top: solid #888;
-    border-bottom: solid #888;
-    padding-top: 20px;
+.commenterImage img {
+    margin-top: 1.8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 999999;
 }
-#comment-list .somebody-said {
-    
+.commenterInformation {
+    margin-bottom: 10px;
+}
+.commenterInformation span {
+    color: #888;
+}
+.commenterAction {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f1f1f1;
+}
+.commenterReplies {
+    margin-left: 30px;
+}
+.commenterMetadata {
     width: 100%;
     box-sizing: border-box;
-
-}
-.comment-cover {
-    font-weight: bold;
-    background: #f0f0f0;
-    padding: 10px;
-    font-synthesis: 
-}
-.delete {
-    margin: 5px 15px;
-    color: #888;
-    font-size: 87.5%;
-}
-#comment-list .delete:after {
-    content: '\f2ed';
-    font-family: 'Font Awesome\ 5 Free',FontAwesome ,'Font Awesome\ 5 Brands';
-    font-weight: 800;
 }
 /* toc */
 #toc {
