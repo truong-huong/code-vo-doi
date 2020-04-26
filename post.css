@@ -397,7 +397,8 @@ blockquote:before {
   font-size: 142%;
 }
 #postBody h4 {
-font-size: 128%;
+font-size: 120%;
+margin-left: 10px;
 }
 #postBody h5 {
   font-size: 114%;
