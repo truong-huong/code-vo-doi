@@ -174,7 +174,23 @@ Array.prototype.forEach.call(samePostArray, (el) => {
 // Kiểm tra comment có code hay những thứ hay ho khác hay không 
 (function(){
   if (getId('comments')) {
-    Array.prototype.forEach.call(getId('comments').querySelectorAll('.somebody-said'), (el) => {
+    Array.prototype.forEach.call(doc.querySelectorAll('.reply'), (el) => {
+    el.addEventListener('click', function(){
+        var paras = document.getElementsByClassName('iframeCommentReply');
+        while(paras[0]) {
+            paras[0].parentNode.removeChild(paras[0]);
+        }​
+        var iframe = document.createElement('iframe');
+        iframe.src = el.getAttribute('data-reply');
+        iframe.height = '320px';
+        iframe.width = '100%';
+        iframe.classList.add('iframeCommentReply')
+        iframe.setAttribute('frameborder','0');
+        iframe.setAttribute('allowtransparency','true');
+        el.parentNode.insertAdjacentElement('afterend', iframe)
+    })
+    });
+    Array.prototype.forEach.call(getId('comments').querySelectorAll('.commenterContent'), (el) => {
       var comment = el.innerHTML ;
       var regex = /\[code(.*?)\]/gim;
       el.innerHTML = comment.replace(regex,function(str){
