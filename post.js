@@ -179,8 +179,7 @@ Array.prototype.forEach.call(samePostArray, (el) => {
         var paras = document.getElementsByClassName('iframeCommentReply');
         while(paras[0]) {
             paras[0].parentNode.removeChild(paras[0]);
-        }​
-        var iframe = document.createElement('iframe');
+        }​var iframe = document.createElement('iframe');
         iframe.src = el.getAttribute('data-reply');
         iframe.height = '320px';
         iframe.width = '100%';
