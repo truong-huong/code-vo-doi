@@ -405,3 +405,8 @@ font-size: 128%;
 #postBody h6 {
     font-size: 100%;
 }
+@media (min-width:425px) {
+.separator img , #postBody img {
+  width: 100%;
+  height: auto;
+}}
