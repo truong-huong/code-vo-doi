@@ -231,19 +231,10 @@ article {
 #post-info span {
     margin:5px;
 }
-.somebody {
-    margin-bottom: 25px;
-}
-.somebody img {
-    width:30px;
-    height:30px;
-    border-radius: 10px;
-    margin-right: 10px;
-}
-.somebody-info {
+.post-preview-intro {
     color: #757474;
 }
-.somebody-info .name {
+.post-preview-intro .name {
     font-weight: bolder;
     color: #000;
 }
@@ -290,14 +281,14 @@ h2:not(:first-child), h3:not(:first-child) {
     margin-bottom: 10px;
     
 }
-.post .somebody-info {
+.post-preview .post-preview-intro {
     margin:10px auto;
     font-weight: 550;
 }
 .post {
     transition:all 0.2s ease-in-out;
 }
-.post .somebody-said:hover {
+.post-preview .post-preview-text:hover {
     color: #888;
     transition:all 0.2s ease-in-out;
 }
@@ -327,7 +318,7 @@ h2:not(:first-child), h3:not(:first-child) {
 .post:not(:last-child) {
     margin-bottom: 50px;
 }
-.post .somebody-said {
+.post .post-preview-text {
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:4;

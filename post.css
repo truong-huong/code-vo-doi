@@ -253,6 +253,12 @@ blockquote:before {
   background-color: #000;
 }
 /* Comments */
+.somebody img {
+    width:30px;
+    height:30px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
 #comment-list {
     margin-top: 20px;
     border-top: solid #888;
