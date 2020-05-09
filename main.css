@@ -297,6 +297,9 @@ h2:not(:first-child), h3:not(:first-child) {
     height: 180px;
     object-fit: cover;   
 }
+.post-header h2 {
+    padding: 0 5px;
+}
 .post-header picture ~ h2 , .post-header img ~ h2 {
     position: absolute;
     display: flex;
