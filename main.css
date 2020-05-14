@@ -154,8 +154,8 @@ header section:first-child {
     border: solid 1px #000;
 }
 #dark , [theme-color=dark] {
-    background-color: #2d3143;
-    color: #62677f;
+    background-color: #0f0e17;
+    color:#a7a9be;
 }
 #pink {
     background:hsla(0, 100%, 90%, 0.3);
@@ -169,10 +169,10 @@ header section:first-child {
 [theme-color=dark] #tags,
 [theme-color=dark] #toc,
 [theme-color=dark] .comment-cover {
-    background-color:  #2d3143;
+    background-color:  #0f0e17;
 }
 [theme-color=dark] .prev a {
-    color: #62677f;
+    color: #a7a9be;
 }
 [theme-color=pink] ,
 [theme-color=pink] header ,
