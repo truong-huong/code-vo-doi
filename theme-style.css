@@ -28,8 +28,11 @@
 [theme-color=dark] .prev a {
     color: #a7a9be;
 }
+[theme-color=dark] .font-awesome-button a {
+    background-color: #ff8906;
+}
 [theme-color=dark] .font-awesome-button svg {
-    fill: #ff8906;
+    fill: #fff;
 }
 /* giao diện nữ tính */
 #pink {
