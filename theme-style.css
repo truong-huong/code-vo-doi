@@ -1,3 +1,5 @@
+                
+
 #theme {
     border-top: solid;
     justify-content: space-around;
@@ -11,17 +13,11 @@
     cursor: pointer;
     border: solid 1px #000;
 }
+/* Giao diện tối */
 #dark , [theme-color=dark] {
     background-color: #0f0e17;
     color:#a7a9be;
-}
-#pink {
-    background:hsla(0, 100%, 90%, 0.3);
-}
-[theme-color] {
-    transition:all 0.5s ease-in-out;
-}
-[theme-color=dark] header ,
+}[theme-color=dark] header ,
 [theme-color=dark] .prev a,
 [theme-color=dark] #about-me,
 [theme-color=dark] #tags,
@@ -32,6 +28,13 @@
 [theme-color=dark] .prev a {
     color: #a7a9be;
 }
+[theme-color=dark] .font-awesome-button svg {
+    fill: #ff8906;
+}
+/* giao diện nữ tính */
+#pink {
+    background:hsla(0, 100%, 90%, 0.3);
+}
 [theme-color=pink] ,
 [theme-color=pink] header ,
 [theme-color=pink] .prev a,
@@ -41,6 +44,7 @@
 [theme-color=pink] .comment-cover {
     background-color: hsla(0, 100%, 90%, 0.3);
 }
+/* giao diện cổ điển */
 #sepia ,
 [theme-color=sepia],
 [theme-color=sepia] header ,
