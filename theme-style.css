@@ -28,8 +28,12 @@
 [theme-color=dark] .prev a {
     color: #a7a9be;
 }
+[theme-color=dark] .post img{
+    border-radius: 10px;
+}
 [theme-color=dark] .font-awesome-button a {
     background-color: #ff8906;
+    border-radius: 50%;
 }
 [theme-color=dark] .font-awesome-button svg {
     fill: #fff;
