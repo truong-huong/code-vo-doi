@@ -31,7 +31,7 @@
 [theme-color=dark] .post img{
     border-radius: 10px;
 }
-[theme-color=dark] .font-awesome-button a {
+[theme-color=dark] a.font-awesome-button {
     background-color: #ff8906;
     border-radius: 50%;
 }
