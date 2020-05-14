@@ -140,59 +140,6 @@ header section:first-child {
     padding: 4px;
     cursor: pointer;
 }
-#theme {
-    border-top: solid;
-    justify-content: space-around;
-    padding: 10px;
-}
-#theme span {
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: solid 1px #000;
-}
-#dark , [theme-color=dark] {
-    background-color: #0f0e17;
-    color:#a7a9be;
-}
-#pink {
-    background:hsla(0, 100%, 90%, 0.3);
-}
-[theme-color] {
-    transition:all 0.5s ease-in-out;
-}
-[theme-color=dark] header ,
-[theme-color=dark] .prev a,
-[theme-color=dark] #about-me,
-[theme-color=dark] #tags,
-[theme-color=dark] #toc,
-[theme-color=dark] .comment-cover {
-    background-color:  #0f0e17;
-}
-[theme-color=dark] .prev a {
-    color: #a7a9be;
-}
-[theme-color=pink] ,
-[theme-color=pink] header ,
-[theme-color=pink] .prev a,
-[theme-color=pink] #about-me,
-[theme-color=pink] #tags,
-[theme-color=pink] #toc,
-[theme-color=pink] .comment-cover {
-    background-color: hsla(0, 100%, 90%, 0.3);
-}
-#sepia ,
-[theme-color=sepia],
-[theme-color=sepia] header ,
-[theme-color=sepia] .prev a,
-[theme-color=sepia] #about-me,
-[theme-color=sepia] #tags,
-[theme-color=sepia] #toc,
-[theme-color=sepia] .comment-cover  {
-    background:#f3eacb;
-}
 .share a:hover , .drop-btn-bottom-left a:hover{
     color: #444;
 }
